@@ -7,7 +7,7 @@ export const App = () => {
 
   return (
     <>
-      <h1 style={{ color: "orange" }}>こんにちは！</h1>
+      <h1 style={{ color: "red" }}>こんにちは！</h1>
       <ColoredMessage />
       <ColoredMessage color="blue">お元気ですか？</ColoredMessage>
       <ColoredMessage color="pink">元気です。</ColoredMessage>
