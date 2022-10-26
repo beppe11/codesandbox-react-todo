@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { ColoredMessage } from "./components/ColoredMessage";
+import { ColoredMessage as CM } from "./components/ColoredMessage";
+import { useEffect } from "react";
 
 export const App = () => {
   const [num, setNum] = useState(0);
@@ -9,11 +10,15 @@ export const App = () => {
     setNum((prev) => prev + 1);
   };
 
+  useEffect(() => {
+    alert();
+  }, [num]);
+
   return (
     <>
       <h1 style={{ color: "red" }}>こんにちは！</h1>
-      <ColoredMessage color="blue">お元気ですか？</ColoredMessage>
-      <ColoredMessage color="pink">元気です。</ColoredMessage>
+      <CM color="blue">お元気ですか？</CM>
+      <CM color="pink">元気です。</CM>
       <button onClick={onClickButton}>ボタン</button>
       <p>{num}</p>
     </>
